@@ -4,7 +4,6 @@
   --bg-page: #f1f5f9;
   --radius: 20px;
 }
-
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
   font-family: system-ui, sans-serif;
