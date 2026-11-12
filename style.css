@@ -1,0 +1,80 @@
+:root {
+  --primary: #10b981;
+  --primary-dark: #059669;
+  --bg-page: #f1f5f9;
+  --radius: 20px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--bg-page);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.product-container { width: 100%; max-width: 380px; }
+
+/* БЭМ: Блок .product-card */
+.product-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);
+  border: 1px solid #e2e8f0;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.product-card:hover { transform: translateY(-4px); }
+
+.product-card__badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #ef4444;
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+
+.product-card__image-box {
+  background: #f8fafc;
+  height: 180px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.product-card__emoji { font-size: 80px; }
+
+.product-card__category { font-size: 11px; text-transform: uppercase; color: #64748b; font-weight: 700; letter-spacing: 0.5px; }
+.product-card__title { font-size: 20px; font-weight: 800; color: #0f172a; margin: 6px 0 10px; }
+.product-card__rating { color: #f59e0b; font-size: 14px; margin-bottom: 16px; }
+.product-card__reviews { color: #94a3b8; font-size: 12px; }
+
+.product-card__pricing { display: flex; align-items: baseline; gap: 10px; margin-bottom: 20px; }
+.product-card__price-new { font-size: 26px; font-weight: 900; color: #0f172a; }
+.product-card__price-old { font-size: 16px; text-decoration: line-through; color: #94a3b8; }
+
+.product-card__btn {
+  width: 100%;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.product-card__btn:hover { background: var(--primary-dark); }
